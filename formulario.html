@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de cadastro</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: radial-gradient(circle, #6ae472, #69acf1);
+      font-size: 1em;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding-top: 20px;
+    }
+
+    #titulo {
+      color: white;
+      font-size: 4em;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      background: radial-gradient(circle, #fff, #69acf1);
+      border-radius: 10px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .flex-container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2%;
+    }
+
+    .conteúdo {
+      display: flex;       
+      justify-content: space-between;
+      gap: 20px;            
+      width: 100%;          
+    }
+
+    .conteúdo .img,
+    .conteúdo .formulario {
+      flex: 1;              
+    }
+
+    .conteúdo .img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .conteúdo .img img {
+      width: 100%;         
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .formulario {
+      display: flex;
+      flex-direction: column; 
+      gap: 1em;               
+    }
+
+    .campo label {
+      margin-bottom: 0.2em;
+      color: #020202;
+      display: block;
+    }
+
+    fieldset {
+      border: 0;
+    }
+
+    fieldset.grupo .campo {
+      float: left;
+      margin-right: 1em;
+    }
+
+    .campo input[type="text"],
+    .campo input[type="date"],
+    .campo input[type="email"],
+    .campo input[type="tel"],
+    .campo input[type="password"] {
+      width: 100%;
+      padding: 0.4em;
+      border: 3px solid #6ae472;
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+    }
+
+    .campo input[type="radio"] {
+      display: inline-block;
+      margin-right: 5px;
+    }
+
+    .botao {
+      font-size: 1.2em;
+      background: #6ae472;
+      border: 0;
+      margin: 20px auto;
+      color: #fff;
+      padding: 0.5em 1em;
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+      display: block;
+      border-radius: 6px;
+    }
+
+    .botao:hover {
+      background-color: #6ae472;
+      box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.2);
+      text-shadow: none;
+    }
+
+    @media (max-width: 768px) {
+      .menu {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <br>
+  <form action="#">
+    <div class="container">
+      <h1 id="titulo">Cadastre-se</h1>
+      <div class="conteúdo">
+        <div class="img">
+          <img src="foto formulario.png.png" alt="Imagem ilustrativa do formulário">
+        </div>
+        
+        <div class="formulario">
+          <fieldset class="grupo">
+            <div class="campo">
+              <label for="nome-completo">Nome completo:</label>
+              <input type="text" name="nome-completo" id="nome-completo" placeholder="Digite seu nome completo" minlength="15" maxlength="80" required>
+            </div>
+
+            <div class="campo">
+              <label for="data-nascimento">Data de nascimento:</label>
+              <input type="date" name="data-nascimento" id="data-nascimento" required>
+            </div>
+
+            <div class="campo">
+              <label for="nome-materno">Nome materno:</label>
+              <input type="text" name="nome-materno" id="nome-materno" placeholder="Digite o nome da sua mãe" required>
+            </div>
+
+            <div class="campo">
+              <label for="cpf">CPF:</label>
+              <input type="text" id="cpf" name="cpf" maxlength="14" placeholder="Digite seu CPF" required>
+            </div>
+          </fieldset>
+
+          <fieldset class="grupo">
+            <div class="campo">
+              <label for="email">Email:</label>
+              <input type="email" name="email" id="email" placeholder="Digite seu email" required>
+            </div>
+
+            <div class="campo">
+              <label for="telefone">Telefone:</label>
+              <input type="tel" name="telefone" id="telefone" placeholder="(+55)xx-xxxx-xxxx" required>
+            </div>
+
+            <div class="campo">
+              <label for="celular">Celular:</label>
+              <input type="tel" name="celular" id="celular" placeholder="(+55)xx-xxxxx-xxxx" required>
+            </div>
+          </fieldset>
+
+          <fieldset class="grupo">
+            <div class="campo">
+              <label>Gênero:</label>
+              <label><input type="radio" name="genero" value="Feminino"> Feminino</label>
+              <label><input type="radio" name="genero" value="Masculino"> Masculino</label>
+              <label><input type="radio" name="genero" value="Outro"> Outro</label>
+              <label><input type="radio" name="genero" value="Prefiro não dizer"> Prefiro não dizer</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="grupo">
+            <div class="campo">
+              <label for="cep">CEP:</label>
+              <input type="text" name="cep" id="cep" placeholder="00000-000" pattern="\d{5}-\d{3}" required>
+            </div>
+
+            <div class="campo">
+              <label for="estado">Estado:</label>
+              <input type="text" name="estado" id="estado" placeholder="Digite seu Estado" required>
+            </div>
+            <div class="campo">
+              <label for="cidade">Cidade:</label>
+              <input type="text" name="cidade" id="cidade" placeholder="Digite sua Cidade" required>
+            </div>
+
+            <div class="campo">
+              <label for="bairro">Bairro:</label>
+              <input type="text" name="bairro" id="bairro" placeholder="Digite seu Bairro" required>
+            </div>
+            <div class="campo">
+              <label for="logradouro">Logradouro:</label>
+              <input type="text" name="logradouro" id="logradouro" placeholder="Digite seu logradouro" required>
+            </div>
+
+            <div class="campo">
+              <label for="numero">Número:</label>
+              <input type="text" name="numero" id="numero" placeholder="Digite o número da sua casa" required>
+            </div>
+            <div class="campo">
+              <label for="complemento">Complemento:</label>
+              <input type="text" name="complemento" id="complemento" placeholder="Digite um Complemento">
+            </div>
+          </fieldset>
+
+          <fieldset class="grupo">
+            <div class="campo">
+              <label for="login">Login:</label>
+              <input type="text" name="login" id="login" placeholder="Digite seu Login" minlength="6" maxlength="6" required>
+            </div>
+
+            <div class="campo">
+              <label for="senha">Senha:</label>
+              <input type="password" name="senha" id="senha" placeholder="Digite sua senha" minlength="8" maxlength="8" required>
+
+              <label for="confirmar-senha">Confirme sua senha:</label>
+              <input type="password" name="confirmar-senha" id="confirmar-senha" placeholder="Confirme sua senha" minlength="8" maxlength="8" required>
+            </div>
+          </fieldset>
+
+          <button class="botao" type="submit">Concluído</button>
+        </div> 
+      </div> 
+    </div>
+  </form>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+     <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+    body {
+        background: radial-gradient(circle, #6ae472, #69acf1);
+        font-size: 1em;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding-top: 20px;
+    }
+    
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        background: radial-gradient(circle, #fff, #69acf1,);
+        border-radius: 10px;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .flex-container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2%;
+    }
+    
+    
+    .botao {
+        font-size: 1.2em;
+        background: #6ae472;
+        border: 0;
+        margin: 20px auto;
+        color: #fff;
+        padding: 0.5em 1em;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+        display: block;
+        border-radius: 6px;
+    }
+    
+    .botao:hover {
+        background-color: #6ae472;
+        box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.2);
+        text-shadow: none;
+    }
+    
+    @media  ( max-width: 768px) {
+        .menu {
+            flex-direction: column;
+        }
+    }
+    
+     </style>
+</head>
+<body>
+    
+  <form action="#">
+    <div class="container">
+      <h1 id="título" style= "color: white;
+      text-align: center;
+      margin-bottom: 20px; 
+      font-size: 3em;">Bem vindo!</h1>
+
+        <div style="text-align: center;" class="conteúdo">
+            <div class="img">
+             <img src="foto formulario.png.png" alt="Imagem ilustrativa do formulário">
+            </div>
+          <div class="formulario">
+             <label style="color: black;" for="login">Login :</label>
+             <input style="color: black; 
+             width: 50%;
+             padding: 0.4em;
+             border: 3px solid #6ae472;
+             box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+             border-radius: 5px;" type="text" name="login" id="login" placeholder="Digite seu login" required>
+          </div>
+
+           <div class="formulario">
+             <label style="color: black;" for="senha">Senha :</label>
+             <input style="color: black; 
+             width: 50%;
+             padding: 0.4em;
+             border: 3px solid #6ae472;
+             box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+             border-radius: 5px;" type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
+           </div>
+         <button class="botao" type="submit">Entrar</button>
+          <div style="color: white;"
+            class="link">
+            <p >
+               <h2>Ainda não tem conta?</h2> 
+               <br>
+               <a href="fomulariodecadastro.html">Cadastre-se aqui</a>
+            </p>
+          </div>
+        </div>
+  </form>  
+    </div>
+</body>
+</html>
