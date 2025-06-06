@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <form> 
+<label> Nome: 
+    <input type="text" name="nome" required>
+</label><br>
+<br>
+<label> Idade (18 a 110):
+    <input type="number" name="Idade" min="18" max="110" required>
+</label><br>
+<br>
+<label> Endereço (min. 20 caracteres):
+    <input type="text" name="Endereço" minlength="20" required>
+</label> <br>
+<br>
+<label> CPF (formato xxx.xxx.xxx.xx):
+    <input type="text" name="CPF"
+pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required>
+</label><br>
+<br>
+
+<label> CEP (formato  xxxxx-xxx)
+    <input type="text" name="CEP"
+    pattern="\d{5}-\d{3}" required>
+</label><br>
+<br>
+<label> Login (começa com 'INF' + 4 LETRAS):
+    <input type="text" name="Login"
+pattern="^INF[a-zA-Z]{4}$" required>
+</label><br>
+<br>
+<label> Senha (6 a 8 caracteres):
+    <input type="password" name="Senha"
+pattern=".{6,8}" required>
+</label><br>
+<br>
+<label> Email:
+    <input type="email" name="Email"
+pattern="^[a-zA-Z][a-zA-Z0-9._-]{4,14}@[a-zA-Z]+\.[a-zA-Z]{2,}$"
+required>
+</label> <br>
+<br>
+<button type="submit">Enviar</button>
+</form>
+</body>
+</html>
